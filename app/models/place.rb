@@ -1,4 +1,4 @@
 class Place < ApplicationRecord
-  has_one :address, dependent: :destroy
+  has_many :addresses, dependent: :destroy
   belongs_to :adventure
 end

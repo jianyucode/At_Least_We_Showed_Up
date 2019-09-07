@@ -1,4 +1,17 @@
-<h1><%= @place.name %></h1>
+  <p><%= @place.name %></p>
 
-<%= link_to 'Edit', edit_place_path%>
-<%= link_to 'Delete', @place, method: :delete%>
+  <ul>
+  <% @place.addresses.each do |a| %>
+    <li><p>Long: <%= a.long %> <br>
+    Lat: <%= a.lat %>
+    <%= link_to "Edit", edit_place_address_path(@place, a.id) %>
+    <%= link_to "Delete",place_address_path(@place, a.id), method: :delete %>
+
+    </li></p>
+
+    <% end %>
+</ul>
+
+<%= link_to "Back", adventure_path(@adventure) %><br>
+
+<%= link_to "Add New Address", new_place_address_path(@place) %>

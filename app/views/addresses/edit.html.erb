@@ -1,10 +1,11 @@
 <h1>Edit Address Info</h1>
 
-<%= form_for @address do |a| %>
+<%= form_with(model: [@place, @address], local: true)  do |a| %>
 <%= a.label :long %>
 <%= a.number_field :long, step: :any %><br><br>
 <%= a.label :lat %>
 <%= a.number_field :lat, step: :any %><br><br>
-<%= a.submit %>
 
+
+  <%= a.submit%>
 <% end %>

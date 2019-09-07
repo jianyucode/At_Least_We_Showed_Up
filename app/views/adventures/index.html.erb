@@ -4,11 +4,10 @@
 <ul>
 
 <% @adventures.each do |a| %>
-<%= link_to a.name, adventure_path(a.id) %>
+<li><%= link_to a.name, adventure_path(a.id) %>
 <%= link_to "edit", edit_adventure_path(a.id) %>
-<%= link_to "Delete", adventure_path(a.id), method: :delete %>
-<% end %>
+<%= link_to "Delete", adventure_path(a.id), method: :delete %><br>
+<% end %></li>
 </ul>
 
 <%= link_to "Add New Adventure", new_adventure_path %>
-

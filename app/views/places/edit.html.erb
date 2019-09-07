@@ -1,2 +1,9 @@
-<h1>Places#edit</h1>
-<p>Find me in app/views/places/edit.html.erb</p>
+<h1>Edit Place</h1>
+
+
+<%= form_with(model: [@adventure, @place], local: true)  do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit%>
+<% end %>

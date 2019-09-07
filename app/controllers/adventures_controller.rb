@@ -3,6 +3,7 @@ class AdventuresController < ApplicationController
 
   def index
     @adventures = Adventure.all
+
   end
 
   def show
@@ -26,6 +27,7 @@ class AdventuresController < ApplicationController
   end
 
   def update
+
     if @adventure = Adventure.update(adventure_params)
     redirect_to adventures_path
   else

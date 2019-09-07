@@ -1,2 +1,8 @@
-<h1>Adventures#new</h1>
-<p>Find me in app/views/adventures/new.html.erb</p>
+<h1>Add an New Adventure</h1>
+
+<%= form_for @adventure do |a| %>
+<%= a.label :name %>
+<%= a.text_field :name %><br><br>
+<%= a.submit %>
+
+<% end %>

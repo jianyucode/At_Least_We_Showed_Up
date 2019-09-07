@@ -1,2 +1,8 @@
-<h1>Adventures#edit</h1>
-<p>Find me in app/views/adventures/edit.html.erb</p>
+<h1>Edit Adventure</h1>
+
+<%= form_for @adventure do |a| %>
+<%= a.label :name %>
+<%= a.text_field :name %><br><br>
+<%= a.submit %>
+
+<% end %>

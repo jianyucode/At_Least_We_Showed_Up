@@ -1,2 +1,8 @@
-<h1>Places#new</h1>
-<p>Find me in app/views/places/new.html.erb</p>
+<h1>Add A New Place</h1>
+
+<%= form_for @place do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.submit%>
+<% end %>

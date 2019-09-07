@@ -9,6 +9,7 @@ class PlacesController < ApplicationController
 
   def new
     @place = Place.new
+    @address = Address.new
   end
 
   def create
@@ -33,7 +34,8 @@ class PlacesController < ApplicationController
   end
 
   def destroy
-
+    @place.destroy
+    redirect_to places_path
   end
 
   private

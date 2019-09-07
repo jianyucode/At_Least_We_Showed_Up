@@ -1,2 +1,11 @@
-<h1>Addresses#new</h1>
-<p>Find me in app/views/addresses/new.html.erb</p>
+
+<h1>Add in New Address Info</h1>
+
+<%= form_for @address do |a| %>
+<%= a.label :long %>
+<%= a.number_field :long, step: :any %><br><br>
+<%= a.label :lat %>
+<%= a.number_field :lat, step: :any %><br><br>
+<%= a.submit %>
+
+<% end %>

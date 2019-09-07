@@ -1,2 +1,10 @@
-<h1>Addresses#edit</h1>
-<p>Find me in app/views/addresses/edit.html.erb</p>
+<h1>Edit Address Info</h1>
+
+<%= form_for @address do |a| %>
+<%= a.label :long %>
+<%= a.number_field :long, step: :any %><br><br>
+<%= a.label :lat %>
+<%= a.number_field :lat, step: :any %><br><br>
+<%= a.submit %>
+
+<% end %>

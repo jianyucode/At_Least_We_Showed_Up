@@ -1,8 +1,13 @@
 <h1>Edit Adventure</h1>
 
+<div class= "ui form">
 <%= form_for @adventure do |a| %>
 <%= a.label :name %>
 <%= a.text_field :name %><br><br>
-<%= a.submit %>
+<div class="ui button"> 
+<%= a.submit%>
+</div>
 
 <% end %>
+</div>
+

@@ -1,18 +1,22 @@
 <h1>Place <%= @adventure.name %></h1>
 
-<ul>
+<div class="ui left aligned grid">
 <% @adventure.places.each do |place| %>
-  <li><%= link_to place.name, adventure_place_path(@adventure, place) %>
-      <%= link_to "edit", edit_adventure_place_path(@adventure, place.id) %>
-      <%= link_to "Delete", adventure_place_path(@adventure, place.id), method: :delete %>
+  <div class="four wide column" >
+  <p><%= link_to place.name, adventure_place_path(@adventure, place) %>
+      <%= link_to "edit", edit_adventure_place_path(@adventure, place.id), class: 'ui button'  %>
+      <%= link_to "Delete", adventure_place_path(@adventure, place.id), method: :delete, class: 'ui button' %>
 
 
 
-  </li>
+  </p>
+  </div>
 <% end %>
-</ul>
+
 
 
 
 <%= link_to "add new place to go", new_adventure_place_path(@adventure) %><br>
 <%= link_to "Back", adventures_path %>
+
+</div>

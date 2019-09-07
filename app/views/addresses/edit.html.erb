@@ -1,5 +1,7 @@
 <h1>Edit Address Info</h1>
 
+
+<div class= "ui form">
 <%= form_with(model: [@place, @address], local: true)  do |a| %>
 <%= a.label :long %>
 <%= a.number_field :long, step: :any %><br><br>
@@ -9,3 +11,4 @@
 
   <%= a.submit%>
 <% end %>
+</div>

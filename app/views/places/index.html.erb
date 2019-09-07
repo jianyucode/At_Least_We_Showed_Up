@@ -1,7 +1,9 @@
 <h1>Places</h1>
 <%= link_to "Add A Place", new_adventure_place_path%>
-<ul>
+
 <% @adventure.places.each do |place| %>
-  <li><%= link_to place.name%></li>
+  <div class="four wide column" >
+  <p><%= link_to place.name%></p>
+  </div>
 <% end %>
-</ul>
+

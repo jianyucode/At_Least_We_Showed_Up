@@ -8,12 +8,10 @@
 <div class="four wide column" >
 <%= link_to a.name, adventure_path(a.id) %>
 <%= link_to "edit", edit_adventure_path(a.id), class: 'ui button' %>
-<%= link_to "Delete", adventure_path(a.id), method: :delete, class: 'ui red button'  %>
+<%= link_to "Delete", adventure_path(a.id), method: :delete, class: 'ui red button'  %><br>
 </div>
 <% end %>
 <%= link_to "Add New Adventure", new_adventure_path, class: 'ui button' %>
 
 </div>
-
-    
 

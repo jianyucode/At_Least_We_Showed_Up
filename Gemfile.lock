@@ -76,6 +76,8 @@ GEM
     concurrent-ruby (1.1.5)
     crass (1.0.4)
     erubi (1.8.0)
+    faker (2.2.2)
+      i18n (~> 1.6.0)
     ffi (1.11.1)
     ffi (1.11.1-x64-mingw32)
     globalid (0.4.2)
@@ -200,6 +202,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
+  faker
   jbuilder (~> 2.7)
   pg (>= 0.18, < 2.0)
   puma (~> 3.11)

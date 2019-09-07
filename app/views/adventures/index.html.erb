@@ -1,14 +1,19 @@
-<h1>Welcome to Adventures</h1>
+<h1 class="ui center aligned header">Welcome to Adventures</h1>
 
 
-<ul>
+
+<div class="ui left aligned grid">
 
 <% @adventures.each do |a| %>
+<div class="four wide column" >
 <%= link_to a.name, adventure_path(a.id) %>
-<%= link_to "edit", edit_adventure_path(a.id) %>
-<%= link_to "Delete", adventure_path(a.id), method: :delete %>
+<%= link_to "edit", edit_adventure_path(a.id), class: 'ui button' %>
+<%= link_to "Delete", adventure_path(a.id), method: :delete, class: 'ui red button'  %>
+</div>
 <% end %>
-</ul>
+<%= link_to "Add New Adventure", new_adventure_path, class: 'ui button' %>
 
-<%= link_to "Add New Adventure", new_adventure_path %>
+</div>
+
+    
 

@@ -1,5 +1,7 @@
 <h1>Places</h1>
-
+<ul>
 <% @places.each do |place| %>
-  <p><%= place.name %></p>
+  <li><%= link_to place.name, place%></li>
 <% end %>
+</ul>
+

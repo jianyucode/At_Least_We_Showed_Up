@@ -32,6 +32,10 @@ class PlacesController < ApplicationController
     end
   end
 
+  def destroy
+
+  end
+
   private
     def set_place
         @place = Place.find(params[:id])

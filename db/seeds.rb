@@ -11,24 +11,18 @@
   )
 
   10.times do
-    address = Address.create(
-      long: Faker::Address.longitude,
-      lat: Faker::Address.latitude
-    )
-
-  10.times do
     place = Place.create(
       name: Faker::Restaurant.name,
       adventure_id: adventure.id,
-      address_id: address.id
     )
+    address = Address.create(
+      long: Faker::Address.longitude,
+      lat: Faker::Address.latitude,
+      place_id: place.id
+    )
+    end
   end
-  end
-
-  end
 
 
-
-puts "Data Seeded."
 
 puts "Data Seeded."

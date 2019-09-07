@@ -3,5 +3,4 @@ Rails.application.routes.draw do
   resources :addresses
   resources :places
   resources :adventures
-
 end

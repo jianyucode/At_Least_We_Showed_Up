@@ -1,10 +1,10 @@
 <h1><%= @adventure.name %></h1>
 
 <ul>
-  <% @places.each do |p|%>
+  <% @adventure.places.each do |p|%>
   <li><%= p.name %></li>
 
     <% end %>
   </ul>
 
-<%= link_to "add new place to go", new_place_path %>
+<%= link_to "add new place to go", new_adventure_place_path(@adventure) %>
